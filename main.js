@@ -35,6 +35,10 @@ for (const key in tipo) {
             break;
     }
 }
-
-console.log(output);
-document.getElementById('display').innerHTML = output;
+if(tamanho > 0 && tamanho <= 10000000 ){
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+}else{
+    console.log('Tamanho invalido ou muito grande')
+    document.getElementById('display').innerHTML = "Tamanho invalido ou muito grande";
+}
