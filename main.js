@@ -7,17 +7,22 @@
 */
 
 // Recebendo as entradas do comprimento e dos tipos de blocos
-var tamanho = prompt('Comprimento da auto estrada');
-var tipo = prompt('Letra de cada bloco da estrada');
+var tamanho = document.getElementById('value1');
+var blocos = document.getElementById('value2');
 
+tamanho.addEventListener('input',operation);
+blocos.addEventListener('input',operation);
+
+//funçao para fazer o calculo
+function operation(){
 var output = 0;
 
 //Verificando cada letra e sommando seu respectivo valor ao output
 //Uso de switch para fácil adição de novos elementos
-for (const key in tipo) {
+for (const key in blocos.value) {
     
     //Uso do UpperCase para evitar diferença entre letras maiusculas e minusculas
-    switch (tipo[key].toUpperCase()) {
+    switch (blocos.value[key].toUpperCase()) {
         case "P":
             output += 2;
             break;
@@ -35,10 +40,11 @@ for (const key in tipo) {
             break;
     }
 }
-if(tamanho > 0 && tamanho <= 10000000 ){
+if(tamanho.value > 0 && tamanho.value <= 10000000 ){
     console.log(output);
     document.getElementById('display').innerHTML = output;
 }else{
     console.log('Tamanho invalido ou muito grande')
     document.getElementById('display').innerHTML = "Tamanho invalido ou muito grande";
+}
 }

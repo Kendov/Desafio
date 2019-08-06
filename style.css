@@ -1,0 +1,27 @@
+body{
+    margin-top: 40vh;
+    font-family: sans-serif;
+    border: none;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+div{
+    
+    font-size: 25px;
+    flex: 1;
+    display: inline-block;
+    margin: 0px 25px 0px 25px;
+    border-style: dotted;
+    border: black;
+    
+}
+
+input{
+    background-color: rgb(228, 228, 228);
+    border-style: none none solid none;
+    border-color: rgb(110, 110, 110);
+    height: 30px;
+
+}
